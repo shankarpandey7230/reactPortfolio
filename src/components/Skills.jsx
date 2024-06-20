@@ -1,11 +1,10 @@
 import React from 'react';
+import Title from './Title';
 
 const Skills = () => {
   return (
     <div className="skills" id="skills">
-      <h2 className="title">
-        <span>Skills</span>
-      </h2>
+      <Title title="Skills" />
       <div className="container flex skills-container">
         <div>
           <i className="fa-brands fa-html5" style={{ color: 'orange' }}></i>

@@ -334,6 +334,9 @@ footer .top ul {
 footer .top ul li {
   line-height: 1.5rem;
 }
+.bottom {
+  padding-bottom: 15px;
+}
 .goUp {
   font-size: 2rem;
   background: var(--color);

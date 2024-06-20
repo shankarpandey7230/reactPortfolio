@@ -1,16 +1,20 @@
 import React from 'react';
+import Admin from '../assets/Admin Pannel.png';
+import Portfolio from '../assets/Portfolio.png';
+import Github from '../assets/Github Users.png';
+import PizzaOrder from '../assets/PizzaOrder.png';
+import Movie from '../assets/Movies.png';
+import Title from './Title';
 
 const Projects = () => {
   return (
     <section className="projects container" id="projects">
-      <h2 className="title">
-        <span>My Projects</span>
-      </h2>
+      <Title title="My Projects" />
 
       <div className="grid project-container">
         <div className="project-card">
           <div className="top">
-            <img src="./Projects/Portfolio.png" alt="" width="100%" />
+            <img src={Portfolio} alt="" width="100%" />
           </div>
           <div className="bottom container">
             <div className="links flex flex-center">
@@ -28,7 +32,7 @@ const Projects = () => {
         </div>
         <div className="project-card">
           <div className="top">
-            <img src="./Projects/Admin Pannel.png" alt="" width="100%" />
+            <img src={Admin} alt="" width="100%" />
           </div>
           <div className="bottom container">
             <div className="links flex flex-center">
@@ -52,7 +56,7 @@ const Projects = () => {
         </div>
         <div className="project-card">
           <div className="top">
-            <img src="./Projects/Github Users.png" alt="" width="100%" />
+            <img src={Github} alt="" width="100%" />
           </div>
           <div className="bottom container">
             <div className="links flex flex-center">
@@ -76,7 +80,7 @@ const Projects = () => {
         </div>
         <div className="project-card">
           <div className="top">
-            <img src="./Projects/PizzaOrder.png" alt="" width="100%" />
+            <img src={PizzaOrder} alt="" width="100%" />
           </div>
           <div className="bottom container">
             <div className="links flex flex-center">
@@ -97,7 +101,7 @@ const Projects = () => {
         </div>
         <div className="project-card">
           <div className="top">
-            <img src="./Projects/Movies.png" alt="" width="100%" />
+            <img src={Movie} alt="" width="100%" />
           </div>
           <div className="bottom container">
             <div className="links flex flex-center">
