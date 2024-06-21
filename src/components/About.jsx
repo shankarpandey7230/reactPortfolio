@@ -8,7 +8,12 @@ const About = () => {
       <Title title="About" />
       <div className="container flex about-content">
         <div className="flex-center myImg">
-          <img src={Profile} alt="Shankar's Speech" width="100%" />
+          <img
+            src={Profile}
+            alt="Shankar's Speech"
+            width="100%"
+            style={{ 'margin-top': '-17rem' }}
+          />
         </div>
         <div className="my-bio container">
           <h2>Shankar Pandey</h2>

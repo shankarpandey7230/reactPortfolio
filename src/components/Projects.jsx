@@ -59,13 +59,13 @@ const Projects = () => {
       <Title title="My Projects" />
 
       <div className="grid project-container">
-        <Project
+        {/* <Project
           img={Portfolio}
           github="https://github.com/shankarpandey7230/FinalPortfolio"
           url="https://shankarpandey7230.github.io/FinalPortfolio/"
           projectitle="Personal Portfolio"
           description="Techstack: HTML, CSS, Javascript, React"
-        />
+        /> */}
         {projectList.map((project, i) => {
           return <Project key={i} {...project} />;
         })}

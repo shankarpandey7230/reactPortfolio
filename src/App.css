@@ -416,9 +416,10 @@ footer .top ul li {
   /* about */
   .about-content {
     flex-direction: column;
+    justify-content: center;
     align-items: center;
   }
   .myImg {
-    margin-top: -17rem;
+    margin-top: -20rem;
   }
 }
