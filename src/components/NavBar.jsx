@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 const NavBar = () => {
   const [showMenu, setShowMenu] = useState(false);
+
   return (
     <header>
       <div className="header container flex">
