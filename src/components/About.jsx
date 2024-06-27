@@ -12,7 +12,7 @@ const About = () => {
             src={Profile}
             alt="Shankar's Speech"
             width="100%"
-            style={{ 'margin-top': '-17rem' }}
+            style={{ marginTop: '-17rem' }}
           />
         </div>
         <div className="my-bio container">

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Footer = () => {
+const Footer = ({ scrollVertical }) => {
   return (
     <>
       <footer className="flex-center">
@@ -51,11 +51,13 @@ const Footer = () => {
           </a>
         </div>
       </footer>
-      <a href="">
-        <div className="goUp flex-center">
-          <i className="fa-solid fa-angle-up"></i>
-        </div>
-      </a>
+      {scrollVertical > 800 && (
+        <a href="">
+          <div className="goUp flex-center">
+            <i className="fa-solid fa-angle-up"></i>
+          </div>
+        </a>
+      )}
     </>
   );
 };

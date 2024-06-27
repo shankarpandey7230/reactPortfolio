@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import './App.css';
 import NavBar from './components/NavBar';
@@ -10,6 +10,21 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 function App() {
+  const [scrollVertical, setScrollVertical] = useState(0);
+
+  const handleOnScrollY = () => {
+    // console.log(window.scrollY)
+    setScrollVertical(window.scrollY);
+  };
+  useEffect(() => {
+    // at the end of render, following code runs
+    window.addEventListener('scroll', handleOnScrollY);
+
+    // cleaning up the events
+    return () => {
+      window.removeEventListener('scroll', handleOnScrollY);
+    };
+  }, []);
   return (
     <>
       {/* <!-- dark mode toggler button --> */}
@@ -35,7 +50,7 @@ function App() {
         <Contact />
 
         {/* <!-- footer --> */}
-        <Footer />
+        <Footer scrollVertical={scrollVertical} />
       </div>
     </>
   );
