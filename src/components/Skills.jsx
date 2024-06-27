@@ -1,5 +1,6 @@
 import React from 'react';
 import Title from './Title';
+import Layout from './Layout';
 
 const Skills = () => {
   return (

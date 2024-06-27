@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
 
 import './App.css';
 import NavBar from './components/NavBar';
@@ -8,50 +9,34 @@ import Projects from './components/Projects';
 import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Layout from './components/Layout';
 
 function App() {
-  const [scrollVertical, setScrollVertical] = useState(0);
-
-  const handleOnScrollY = () => {
-    // console.log(window.scrollY)
-    setScrollVertical(window.scrollY);
-  };
-  useEffect(() => {
-    // at the end of render, following code runs
-    window.addEventListener('scroll', handleOnScrollY);
-
-    // cleaning up the events
-    return () => {
-      window.removeEventListener('scroll', handleOnScrollY);
-    };
-  }, []);
   return (
     <>
-      {/* <!-- dark mode toggler button --> */}
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route path="/" element={<Hero />} />
+          <Route path="skills" element={<Skills />} />
+          <Route path="projects" element={<Projects />} />
+          <Route path="about" element={<About />} />
+          <Route path="contact" element={<Contact />} />
+        </Route>
+      </Routes>
 
-      <input type="checkbox" id="toggler" />
-      <div className="wrapper">
-        <label htmlFor="toggler">
-          <i className="fa-solid fa-circle-half-stroke"></i>
-        </label>
-        {/* <!-- navbar --> */}
-        <NavBar />
+      {/* <!-- hero section --> */}
+      {/* <Hero /> */}
+      {/* <!-- skills --> */}
+      {/* <Skills /> */}
 
-        {/* <!-- hero section --> */}
-        <Hero />
-        {/* <!-- skills --> */}
-        <Skills />
+      {/* <!-- projects --> */}
+      {/* <Projects /> */}
+      {/* <!-- about --> */}
+      {/* <About /> */}
+      {/* <!-- contact --> */}
+      {/* <Contact /> */}
 
-        {/* <!-- projects --> */}
-        <Projects />
-        {/* <!-- about --> */}
-        <About />
-        {/* <!-- contact --> */}
-        <Contact />
-
-        {/* <!-- footer --> */}
-        <Footer scrollVertical={scrollVertical} />
-      </div>
+      {/* <!-- footer --> */}
     </>
   );
 }

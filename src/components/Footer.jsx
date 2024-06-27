@@ -1,6 +1,21 @@
 import React from 'react';
 
-const Footer = ({ scrollVertical }) => {
+const Footer = () => {
+  // const [scrollVertical, setScrollVertical] = useState(0);
+
+  // const handleOnScrollY = () => {
+  //   // console.log(window.scrollY)
+  //   setScrollVertical(window.scrollY);
+  // };
+  // useEffect(() => {
+  //   // at the end of render, following code runs
+  //   window.addEventListener('scroll', handleOnScrollY);
+
+  //   // cleaning up the events
+  //   return () => {
+  //     window.removeEventListener('scroll', handleOnScrollY);
+  //   };
+  // }, []);
   return (
     <>
       <footer className="flex-center">
@@ -51,13 +66,13 @@ const Footer = ({ scrollVertical }) => {
           </a>
         </div>
       </footer>
-      {scrollVertical > 800 && (
+      {/* {scrollVertical > 800 && (
         <a href="">
           <div className="goUp flex-center">
             <i className="fa-solid fa-angle-up"></i>
           </div>
         </a>
-      )}
+      )} */}
     </>
   );
 };
