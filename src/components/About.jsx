@@ -4,7 +4,7 @@ import Title from './Title';
 
 const About = () => {
   return (
-    <section className="about" id="about">
+    <section className="about  mt-5" id="about">
       <Title title="About" />
       <div className="container flex about-content">
         <div className="flex-center myImg">
