@@ -13,7 +13,7 @@ const Project = ({ img, github, url, projectitle, description }) => {
             <i className="fa-brands fa-github"></i>
           </a>
 
-          <a href={url}>
+          <a href={url} target="_blank">
             <i className="fa-brands fa-chrome"></i>
           </a>
         </div>
